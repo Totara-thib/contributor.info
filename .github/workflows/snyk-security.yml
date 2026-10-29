@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.4.0
         with:
           persist-credentials: false
           fetch-depth: 0 # Fetch all history for git diff
@@ -29,7 +29,7 @@ jobs:
           echo "Changed files: $CHANGED_FILES"
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.4.0
         with:
           node-version: '18'
 
@@ -238,7 +238,7 @@ jobs:
       - name: Upload Security Report
         if: always()
         continue-on-error: true
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: security-scan-results
           path: |
