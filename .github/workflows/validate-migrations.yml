@@ -12,6 +12,10 @@ permissions:
 
 jobs:
   validate:
+    permissions:
+      contents: read
+      # Comments the analysis on the pull request when validation fails.
+      pull-requests: write
     name: Validate Migration Compatibility
     runs-on: ubuntu-latest
 

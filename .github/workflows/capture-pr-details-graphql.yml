@@ -32,6 +32,8 @@ jobs:
       contents: read
       # Reads the pull request through the GraphQL API.
       pull-requests: read
+      # The failure step opens or updates a tracking issue.
+      issues: write
     name: Capture PR Details
     runs-on: ubuntu-latest
     timeout-minutes: 10
