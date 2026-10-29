@@ -191,6 +191,7 @@ jobs:
       - name: Checkout base branch code
         uses: actions/checkout@v4
         with:
+          persist-credentials: false
           ref: ${{ github.event.pull_request.base.ref }}
 
       - name: Download check results
@@ -308,6 +309,7 @@ jobs:
       - name: Checkout base branch
         uses: actions/checkout@v4
         with:
+          persist-credentials: false
           ref: ${{ github.event.pull_request.base.ref }}
 
       - name: Auto-label PR based on changes

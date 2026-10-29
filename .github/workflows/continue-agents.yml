@@ -34,6 +34,8 @@ jobs:
       has-agents: ${{ steps.discover.outputs.has_agents }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Discover agents
         id: discover
@@ -63,6 +65,8 @@ jobs:
         agent: ${{ fromJson(needs.discover.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
