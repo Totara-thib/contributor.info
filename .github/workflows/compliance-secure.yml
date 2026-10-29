@@ -13,6 +13,9 @@ concurrency:
 # SECURITY NOTE: This workflow uses pull_request_target to access secrets for commenting
 # but checks out the PR code in a restricted environment without access to secrets
 
+permissions:
+  contents: read
+
 jobs:
   # Job 1: Checkout PR code safely and run checks without secrets
   code-checks:

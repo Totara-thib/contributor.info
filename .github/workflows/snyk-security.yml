@@ -3,8 +3,15 @@ name: Snyk Security Scanning
 on:
   workflow_dispatch: # Manual trigger for on-demand scans
 
+permissions:
+  contents: read
+
 jobs:
   security-scan:
+    permissions:
+      contents: read
+      # Posts the mitigation suggestions as a pull request comment.
+      pull-requests: write
     runs-on: ubuntu-latest
 
     steps:

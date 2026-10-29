@@ -7,6 +7,9 @@ on:
       - 'scripts/migrations/*.js'
       - '.github/workflows/validate-migrations.yml'
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     name: Validate Migration Compatibility

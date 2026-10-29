@@ -9,8 +9,15 @@ on:
       - '.github/workflows/deploy-social-cards.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
+    permissions:
+      contents: read
+      # Comments the deployment result on the pull request.
+      pull-requests: write
     name: Deploy to Fly.io
     runs-on: ubuntu-latest
     if: github.repository == 'bdougie/contributor.info'

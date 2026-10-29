@@ -29,6 +29,9 @@ concurrency:
   group: progressive-backfill
   cancel-in-progress: false
 
+permissions:
+  contents: read
+
 jobs:
   backfill:
     name: Progressive Backfill

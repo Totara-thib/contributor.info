@@ -5,8 +5,15 @@ on:
     types:
       - opened
 
+permissions:
+  contents: read
+
 jobs:
   add-to-project:
+    permissions:
+      contents: read
+      # Creates the needs-triage label and puts it on the issue.
+      issues: write
     name: Add issue to contributor.info project
     runs-on: ubuntu-latest
     steps:

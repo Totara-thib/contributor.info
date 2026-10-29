@@ -23,8 +23,15 @@ on:
 env:
   NODE_VERSION: '20'
 
+permissions:
+  contents: read
+
 jobs:
   capture:
+    permissions:
+      contents: read
+      # Reads the pull request through the GraphQL API.
+      pull-requests: read
     name: Capture PR Details
     runs-on: ubuntu-latest
     timeout-minutes: 10

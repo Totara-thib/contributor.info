@@ -10,6 +10,9 @@ on:
     paths:
       - 'supabase/functions/**'
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-latest
